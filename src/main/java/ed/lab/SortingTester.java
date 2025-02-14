@@ -24,7 +24,7 @@ public class SortingTester<T extends Comparable<T>> {
 
             final LocalDateTime end = LocalDateTime.now();
             durations.add(Duration.between(start, end));
-        }
+    }
 
         double average = durations.stream()
                 .mapToLong(Duration::toMillis)
@@ -34,3 +34,4 @@ public class SortingTester<T extends Comparable<T>> {
         System.out.printf("\t\tTiempo promedio: %s ms\n", average);
     }
 }
+// hola
