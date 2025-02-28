@@ -7,8 +7,8 @@ import java.util.Arrays;
 import java.util.List;
 
 public class SortingTester<T extends Comparable<T>> {
-    private static final int ARRAY_SIZE = 10000;
-    private static final int TEST_SIZE = 1000;
+    private static final int ARRAY_SIZE = 10;
+    private static final int TEST_SIZE = 1;
 
     public void testSorting(ArrayGenerator<T> generator, QuickSort<T> quickSort) {
         T[] array = generator.generate(ARRAY_SIZE);
@@ -32,6 +32,12 @@ public class SortingTester<T extends Comparable<T>> {
                 .orElse(0);
 
         System.out.printf("\t\tTiempo promedio: %s ms\n", average);
+
+        double sum = durations.stream()
+                .mapToLong(Duration::toMillis)
+                .sum();
+        System.out.printf("\t\tTiempo total: %s ms\n", sum);//
+
     }
 }
 // hola

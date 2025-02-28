@@ -10,6 +10,7 @@ public class Main {
     };
 
 
+
     private static final ArrayGenerator<Integer> invertedArrayGenerator = length -> {
         Integer[] array = new Integer[length];
         for (int i = 0; i < length; i++) {
@@ -28,11 +29,10 @@ public class Main {
     };
 
 
-    private static final QuickSort<Integer> highPivotQuickSort = null; // Reemplácelo por una referencia a un método
+    private static final QuickSort<Integer> highPivotQuickSort = array-> SortingAlgorithms.highPivotQuickSort (array);
+    private static final QuickSort<Integer> lowPivotQuickSort = array-> SortingAlgorithms.lowPivotQuickSort (array);
+    private static final QuickSort<Integer> randomPivotQuickSort = array-> SortingAlgorithms.randomPivotQuickSort (array);
 
-    private static final QuickSort<Integer> lowPivotQuickSort = null; // Reemplácelo por una referencia a un método
-
-    private static final QuickSort<Integer> randomPivotQuickSort = null; // Reemplácelo por una referencia a un método
 
     public static QuickSort<Integer> getHighPivotQuickSort() {
         return highPivotQuickSort;
